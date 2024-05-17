@@ -1,0 +1,315 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+}
+
+/* font-family: 'Ephesis', cursive; */
+
+/* ================= INDEX ================= */
+
+.loading{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.carregando {
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 250%;
+    margin-top: 30px;
+}
+
+.iconspan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    margin: 12px;
+}
+
+.iconspan span{
+    animation: bounce .6s cubic-bezier(0.6,0.1,1,0.4);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.iconspan span:nth-child(1){
+    animation-delay: .1s;
+}
+
+.iconspan span:nth-child(2){
+    animation-delay: .2s;
+}
+
+.iconspan span:nth-child(3){
+    animation-delay: .3s;
+}
+
+@keyframes bounce{
+    to{
+        transform: translateY(50px);
+    }
+}
+
+/* ================= MENU ================= */
+.menu ul{
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    background-color: #5AC7AA;
+    height: 60px;
+    justify-content: right; 
+    align-items: center; 
+    color: #332E1D;
+    font-weight: 600; 
+}
+
+.menu ul li{
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.menu ul li:hover{
+    background-color: #9ADCB9;
+    color: #332E1D;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #332E1D;
+}
+
+/* ================= CONTEÚDO ================= */
+.conteudo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fundo1.png");
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+/* ================= FRASE ================= */
+.frase{
+    margin: 5px 150px;
+}
+
+.quote{
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Ephesis', cursive;
+}
+
+.autor{
+    text-align: right;
+    font-size: 80%;
+    margin-right: 40px;
+}
+
+/* ================= CARD DA VISUALIZAÇÃO ================= */
+.card {
+    margin: 20px;
+    border: 0.1px solid #8c7c46;
+    border-radius: 7px;
+    padding: 10px;
+    background-image: linear-gradient(#9ADCB9,#FAFCD3);
+    width: 300px;
+    font-size: medium;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Divide o card em duas colunas, com a informação do livro à esquerda */
+    grid-template-rows: auto auto; /* Define duas linhas */
+    gap: 10px; /* Espaço entre as células do grid */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.livro {
+    grid-column: 1; /* As informações do livro ocuparão a primeira coluna */
+    grid-row: 1 / span 2; /* As informações do livro ocuparão a primeira e segunda linha */
+}
+
+.fotolivro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2; /* A foto ocupará a segunda coluna */
+    grid-row: 1; /* A foto ocupará apenas a primeira linha */
+}
+
+.botao {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    grid-column: 2; /* Os botões ocuparão a segunda coluna */
+    grid-row: 2; /* Os botões ocuparão a segunda linha */
+    margin-top: auto; /* Move os botões para a parte inferior da célula */
+}
+
+.botao img {
+    max-width: 30px;
+    height: auto;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    margin-block-start: 1px;
+    margin-bottom: 7px;
+}
+
+input[type="submit"], [type="reset"]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    margin-right: 15px;
+}
+
+input [type="file"]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(196, 52, 52);
+    color: white;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover{
+    background-color: #9ADCB9;
+    color: black;
+    cursor: pointer;
+}
+
+/* ================= FORMULÁRIO ================= */
+
+.form{
+    margin: 20px auto;
+    border: 0.1px solid #8c7c46;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #FAFCD3;
+    max-width: 600px;
+    font-size: 18px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro{
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Ephesis', cursive;
+}
+
+.formulario{
+    margin: 10px;
+}
+
+::placeholder {
+    font-size: 13px;
+}
+
+/* ================= INPUT TEXT ================= */
+input[type="text"]{
+    size-adjust: auto;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ================= INPUT FILE ================= */
+input[type="file"]{
+    size-adjust: auto;
+    font-size: 90%;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+/* ================= BOTÕES ================= */
+button{
+    padding: 0;
+    cursor: pointer;
+    height: 35px;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.btnDireita img{
+    max-height: 100%;
+    max-width: 100%;
+    display: center;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 5%;
+}
+
+.btnDireita{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ================= TOOLTIP ================= */
+.tooltip {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    visibility: hidden;
+    min-width: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    visibility: hidden;
+    width: 90px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    top: -60px; 
+    right: 75%;
+}
