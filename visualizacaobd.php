@@ -3,7 +3,7 @@
 
     try {
         // variável que contem a instrução SQL a ser executada
-        $comandoSQL = "SELECT * FROM livro";
+        $comandoSQL = "SELECT * FROM livro ORDER BY id_livro DESC ";
 
         // comando para executar a instrução SQL no banco
         $dadosSelecionados = $conexao->query($comandoSQL);
