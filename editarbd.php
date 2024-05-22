@@ -33,27 +33,36 @@
                         `genero_livro` = :genero_livro
                     WHERE `id_livro` = :id_livro
                 ");
-                $comandoSQL->bindParam(':foto_livro', $foto); // Bind a nova foto
+                
+                $comandoSQL->execute(array(
+                    ":titulo_livro" => $titulo_livro,
+                    ":foto_livro" => $foto,
+                    ":autor_livro" => $autor_livro,
+                    ":editora_livro" => $editora_livro,
+                    ":genero_livro" => $genero_livro,
+                    ":id_livro" => intval($id_livro)
+                ));
+
             } else {
                 $comandoSQL = $conexao->prepare("
                     UPDATE `livro` SET
                         `titulo_livro` = :titulo_livro,
-
                         `autor_livro` = :autor_livro,
                         `editora_livro` = :editora_livro,
                         `genero_livro` = :genero_livro
                     WHERE `id_livro` = :id_livro
                 ");
+
+                $comandoSQL->execute(array(
+                    ":titulo_livro" => $titulo_livro,
+                    ":autor_livro" => $autor_livro,
+                    ":editora_livro" => $editora_livro,
+                    ":genero_livro" => $genero_livro,
+                    ":id_livro" => intval($id_livro)
+                ));
             }
 
-            $comandoSQL->execute(array(
-                ":titulo_livro" => $titulo_livro,
-                // ":foto_livro" => $foto,
-                ":autor_livro" => $autor_livro,
-                ":editora_livro" => $editora_livro,
-                ":genero_livro" => $genero_livro,
-                ":id_livro" => intval($id_livro)
-            ));
+            
 
             if ($comandoSQL->rowCount() > 0){
                 // echo("Inserido com sucesso");

@@ -8,8 +8,8 @@
         // comando para executar a instrução SQL no banco
         $dadosSelecionados = $conexao->query($comandoSQL);
 
-        // transforma os dados vindos do banco em uma matriz
-        $dados = $dadosSelecionados->fetchAll();
+        // transforma os dados vindos do banco em um array associativo
+        $dados = $dadosSelecionados->fetchAll(PDO::FETCH_ASSOC);
 
         // total de registros afetados
         $totalRegistros = $dadosSelecionados->rowCount();

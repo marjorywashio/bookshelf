@@ -18,6 +18,13 @@
 
     <div class="fundo">
 
+        <div class="pesquisa">
+            <form action="" method="GET" class="form-pesquisa">
+                <input type="text" name="query" placeholder="Digite o título do livro..." class="textopesquisa" required>
+                <input type="submit" value="Pesquisar" class="botao-pesquisa">
+            </form>
+        </div>
+
         <div class="conteudo">
 
             <div class="frase">
@@ -25,10 +32,19 @@
                 <p class="autor">Alvo Dumbledore , Harry Potter e as Relíquias da Morte</p>
             </div>
 
+            
+            
             <?php 
-                require_once("./visualizacaobd.php");
-                if($totalRegistros > 0){
-                    foreach($dados as $linha){
+                 // Inclui o arquivo de visualização padrão ou de pesquisa
+                if (isset($_GET['query']) && !empty($_GET['query'])) {
+                    $query = $_GET['query'];
+                    require_once("./pesquisa.php");
+                } else {
+                    require_once("./visualizacaobd.php");
+                }
+
+                if (isset($totalRegistros) && $totalRegistros > 0) {
+                    foreach ($dados as $linha) {
             ?>
 
             <div class="card">

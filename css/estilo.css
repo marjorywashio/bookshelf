@@ -105,6 +105,30 @@ body, html{
     background-attachment: fixed;
 }
 
+/* ================= PESQUISA ================= */
+
+.pesquisa {
+    background-color: #5AC7AA;
+}
+
+.form-pesquisa {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.textopesquisa {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 40% !important;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 350px;
+}
+
+.botao-pesquisa {
+    margin-left: 10px;
+}
+
+
 /* ================= FRASE ================= */
 .frase{
     margin: 5px 150px;
@@ -174,8 +198,10 @@ p {
     margin-bottom: 7px;
 }
 
+/* ================= INPUTS ================= */
+
 input[type="submit"], [type="reset"]{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     padding: 5px;
     border-radius: 5px;
@@ -185,14 +211,14 @@ input[type="submit"], [type="reset"]{
 }
 
 input [type="file"]{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     padding: 5px;
     border-radius: 5px;
 }
 
 input[type="submit"]:hover{
-    background-color: rgb(196, 52, 52);
+    background-color: rgb(23, 173, 80);
     color: white;
     cursor: pointer;
 }
@@ -201,6 +227,14 @@ input[type="reset"]:hover{
     background-color: #9ADCB9;
     color: black;
     cursor: pointer;
+}
+
+input[type="text"]{
+    size-adjust: auto;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* ================= FORMULÁRIO ================= */
@@ -228,23 +262,6 @@ input[type="reset"]:hover{
 
 ::placeholder {
     font-size: 13px;
-}
-
-/* ================= INPUT TEXT ================= */
-input[type="text"]{
-    size-adjust: auto;
-    font-size: 18px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* ================= INPUT FILE ================= */
-input[type="file"]{
-    size-adjust: auto;
-    font-size: 90%;
-    width: 100%;
-    margin-top: 10px;
-    
 }
 
 /* ================= BOTÕES ================= */
