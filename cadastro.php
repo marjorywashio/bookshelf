@@ -17,13 +17,13 @@
         <?php require_once("./_menu.php"); ?>
     </div>
 
-    <div class="conteudo">
+    <div class="conteudo-cadastro">
         <div class="frase">
             <p class="quote">"Só se vê bem com o coração, o essencial é invisível aos olhos."</p>
             <p class="autor">O Pequeno Príncipe, Antoine de Saint-Exupéry</p>
         </div>
 
-        <div class="form">
+        <div class="form-cadastro">
 
             <form action="cadastrobd.php" method="post" enctype="multipart/form-data">
 
